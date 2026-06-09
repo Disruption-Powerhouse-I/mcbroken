@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Big Friendly Book of McBroken</title>
+<style>
+  @page { size: A4; margin: 16mm 14mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif;
+    color: #2b2b2b;
+    line-height: 1.6;
+    font-size: 15px;
+    background: #fffdf7;
+    margin: 0;
+  }
+  h1 { font-size: 40px; color: #e8462b; text-align: center; margin: 4px 0; line-height: 1.15; }
+  h2 {
+    font-size: 26px; color: #fff; background: #2e9bda;
+    padding: 10px 18px; border-radius: 18px; margin-top: 34px;
+    box-shadow: 4px 4px 0 #1b6fa3;
+  }
+  h3 { font-size: 19px; color: #c0392b; margin-top: 22px; }
+  p, li { font-size: 15px; }
+  .subtitle { text-align:center; font-size:18px; color:#6a6a6a; margin-top:0; }
+  .cover {
+    text-align:center; padding: 40px 20px 30px;
+    background: linear-gradient(135deg,#fff3b0,#ffd6a5);
+    border-radius: 30px; border: 6px dashed #e8462b; margin-bottom: 10px;
+  }
+  .cover .emoji { font-size: 70px; margin: 6px; }
+  .chapter-num {
+    display:inline-block; background:#f7c948; color:#7a4b00;
+    border-radius: 50%; width: 40px; height: 40px; line-height: 40px;
+    text-align:center; font-weight:bold; margin-right: 8px;
+  }
+  .box {
+    border-radius: 18px; padding: 14px 18px; margin: 16px 0;
+    border: 3px solid;
+  }
+  .didyouknow { background:#e7f8ec; border-color:#36b37e; }
+  .bigword   { background:#fdeef7; border-color:#d6409f; }
+  .trythis   { background:#eaf3ff; border-color:#2e9bda; }
+  .warning   { background:#fff3e0; border-color:#f29d38; }
+  .box .label { font-weight:bold; display:block; margin-bottom:4px; font-size:16px; }
+  .didyouknow .label { color:#1e7a52; }
+  .bigword .label   { color:#a32673; }
+  .trythis .label   { color:#1b6fa3; }
+  .warning .label   { color:#b5651d; }
+  table { width:100%; border-collapse: collapse; margin: 14px 0; }
+  th { background:#2e9bda; color:#fff; padding:8px; text-align:left; border-radius: 0; }
+  td { padding:8px; border-bottom: 2px dotted #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background:#f6fbff; }
+  .status-row {
+    display:flex; justify-content:space-around; text-align:center;
+    background:#fff; border:3px solid #ffd6a5; border-radius:18px; padding:12px; margin:14px 0;
+  }
+  .status-row div { font-size: 14px; }
+  .status-row .big { font-size: 34px; display:block; }
+  .green{color:#36b37e;font-weight:bold;} .orange{color:#f29d38;font-weight:bold;} .red{color:#e8462b;font-weight:bold;}
+  .pagebreak { page-break-before: always; }
+  .glossary dt { font-weight:bold; color:#c0392b; margin-top:8px; }
+  ul { margin: 6px 0; }
+  .footer-note { text-align:center; color:#999; font-size:12px; margin-top:30px; }
+  .mascot { font-size: 22px; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="emoji">🍦🥤☕❄️</div>
+  <h1>The Big Friendly Book<br>of McBroken</h1>
+  <p class="subtitle">How We Built a Magic Ice-Cream Detective App<br>(and how we take care of it!)</p>
+  <p class="subtitle">⭐ A Picture-Book Guide for Curious Builders ⭐</p>
+  <p style="color:#999; font-size:13px;">Written for the McBroken team • 3 to 5 friends • Using mostly FREE toys</p>
+</div>
+
+<div class="box trythis">
+  <span class="label">👋 Hello, builder!</span>
+  This book explains how the <b>McBroken</b> app works using simple words and pictures.
+  Every page has a real grown-up secret hidden inside it. If you read the whole book,
+  you will know how to build a real phone app — and how to keep it happy for two whole years!
+</div>
+
+<h2><span class="chapter-num">1</span> The One Big Question</h2>
+<p>
+  Imagine you really, <i>really</i> want a McFlurry. 🍦 You drive all the way to McDonald's…
+  and the machine is <b>broken</b>! Oh no! What a sad day.
+</p>
+<p>
+  McBroken is an app that answers <b>one</b> question, super fast:
+</p>
+<p style="text-align:center; font-size:20px; color:#e8462b;"><b>"Can I get my frozen treat at THIS McDonald's right now?"</b></p>
+<p>
+  That's it. No long stories. No pictures of food. No chatting. You <b>open</b> the app,
+  you <b>look</b>, you <b>decide</b>. Open, look, decide! 🚀
+</p>
+<div class="box didyouknow">
+  <span class="label">💡 Did you know?</span>
+  There are more than <b>13,000</b> McDonald's restaurants in the United States! That's a lot of
+  ice-cream machines to keep an eye on. We can't watch them all ourselves — so kind people called
+  <b>Flurry Scouts</b> help us. (More about them soon!)
+</div>
+
+<h2><span class="chapter-num">2</span> The Four Frozen Friends</h2>
+<p>Every McDonald's has <b>four</b> cold treats that we watch. We call them the Four Frozen Friends:</p>
+<div class="status-row">
+  <div><span class="big">🍦</span> McFlurry</div>
+  <div><span class="big">🥤</span> Milkshake</div>
+  <div><span class="big">☕</span> Frappe</div>
+  <div><span class="big">❄️</span> Frozen Coke</div>
+</div>
+<p>
+  We always show these four friends in the <b>same order</b>, like four good buddies standing in a row.
+  We call it the <b>Sacred Row</b>. No matter which store you look at, the row looks the same — so your
+  eyes always know where to look. 👀
+</p>
+<div class="box bigword">
+  <span class="label">📚 Big Word Alert: "Component"</span>
+  Grown-up engineers call each frozen friend a <b>component</b>. It just means "one of the four things
+  we keep track of." When you hear "component," picture a frozen friend! 🥤
+</div>
+
+<h2><span class="chapter-num">3</span> The Three Traffic-Light Moods</h2>
+<p>Each frozen friend can be in one of three moods, just like a traffic light:</p>
+<div class="status-row">
+  <div><span class="big">🟢</span> <span class="green">Chillin'</span><br>All good!<br>Go get it!</div>
+  <div><span class="big">🟠</span> <span class="orange">Sus</span><br>Hmm, maybe<br>broken?</div>
+  <div><span class="big">🔴</span> <span class="red">Cooked</span><br>Oh no, it's<br>down!</div>
+</div>
+<p>How does a friend change its mood? With a simple counting game! 🔢</p>
+<table>
+  <tr><th>How many people said "it's broken!"</th><th>Mood</th></tr>
+  <tr><td>Nobody (0)</td><td>🟢 <span class="green">Chillin'</span> — everything is fine</td></tr>
+  <tr><td>One person (1)</td><td>🟠 <span class="orange">Sus</span> — one person had trouble</td></tr>
+  <tr><td>Two or more people (2+)</td><td>🔴 <span class="red">Cooked</span> — uh oh, it's really down</td></tr>
+</table>
+<div class="box didyouknow">
+  <span class="label">💡 The clever secret</span>
+  We only count <b>different</b> people. If <i>you</i> tap "broken" two times, that still counts as
+  just <b>one</b> person. So nobody can trick the app by tapping a bunch of times! This is how we
+  keep the app honest. 🤝
+</div>
+<div class="box bigword">
+  <span class="label">📚 Big Word Alert: "We don't store the mood"</span>
+  Here's a grown-up trick: the app does <b>not</b> save the mood anywhere. Instead, it <b>counts the
+  reports fresh</b> every single time you look. This means the mood is always correct and never gets
+  stuck on the wrong color. Engineers call this <i>"computing status on read."</i> Fancy! ✨
+</div>
+
+<h2 class="pagebreak"><span class="chapter-num">4</span> The Magic 24-Minute Timer</h2>
+<p>
+  Ice-cream machines get fixed all the time! So an old report shouldn't make a store look broken forever.
+</p>
+<p>
+  That's why every report has a <b>magic timer</b>. After <b>24 minutes</b>, the report goes
+  <i>poof</i> 💨 and disappears. If all the "broken" reports disappear, the frozen friend goes back
+  to happy <span class="green">Chillin'</span> green.
+</p>
+<div class="box trythis">
+  <span class="label">🎯 Try this thought:</span>
+  Think of each report like an ice cube. 🧊 As soon as someone drops it, it starts melting.
+  After 24 minutes, it has melted away completely — gone! Only the fresh, un-melted ice cubes
+  count toward the mood.
+</div>
+<p>
+  We also show how <b>fresh</b> the news is, like <b>"7m ago"</b> (which means "7 minutes ago").
+  We never show long, boring history lists. Just the fresh scoop! 🍨
+</p>
+
+<h2><span class="chapter-num">5</span> Your Secret Scout Name</h2>
+<p>
+  When you open McBroken for the first time, something magical happens. You don't have to type your
+  name. You don't need an email. No password. <b>Nothing!</b>
+</p>
+<p>
+  Instead, the app gives you a secret <b>field ID</b> — a cool code name like:
+</p>
+<p style="text-align:center; font-size:22px; color:#2e9bda;"><b>🥄 Flurry Scout ID: K7QX-91RM</b></p>
+<p>
+  This is your spy name as a <b>Flurry Scout</b>! It stays with you, but it never tells anyone who you
+  really are. We don't know your name, and we don't want to. Your secret is safe. 🤫
+</p>
+<div class="box bigword">
+  <span class="label">📚 Big Word Alert: "Anonymous"</span>
+  <b>Anonymous</b> means "nobody knows who you are." McBroken is anonymous on purpose. We collect
+  <b>no names</b>, no phone numbers, no nothing. You're just a brave, mysterious scout. 🕵️
+</div>
+<div class="box warning">
+  <span class="label">⚠️ A tiny secret for grown-ups</span>
+  Behind the curtain, the app quietly makes sure one person can't make a hundred fake scout names to
+  cheat. It uses a special phone "fingerprint" (called <i>App Attest</i> and <i>Play Integrity</i>)
+  that's totally free. But shhh — kids and users never see this. It just works. 🪄
+</div>
+
+<h2><span class="chapter-num">6</span> The "Are You REALLY There?" Rule</h2>
+<p>
+  This is the <b>most important rule</b> in the whole book. Are you ready? 🥁
+</p>
+<p style="text-align:center; font-size:18px; color:#e8462b;">
+  <b>You can only report about a store if you are actually AT that store.</b>
+</p>
+<p>
+  Why? Because if someone far away could say "the McFlurry is broken," they might just be being silly
+  or mean. But a scout who is <b>really standing there</b> knows the truth! That's what makes McBroken
+  trustworthy. 💪
+</p>
+<p>
+  So the app checks your location. If you're close enough (about as far as a football field, around
+  <b>150 meters</b>), it says <b>"In range ✅"</b>. If you're too far, it says
+  <b>"Not in range ⚠️"</b> and politely won't let you report.
+</p>
+<div class="box bigword">
+  <span class="label">📚 Big Word Alert: "Geofence"</span>
+  A <b>geofence</b> is an invisible bubble drawn around the store. 🫧 If you're inside the bubble, you
+  can report. If you're outside, you can't. The <b>server</b> (the big brain in the cloud) draws the
+  bubble and decides — not your phone. That way nobody can fib about where they are.
+</div>
+<div class="box warning">
+  <span class="label">⚠️ No location = no McBroken</span>
+  If someone says "no, you can't know where I am," then sadly they can't use the app. That's okay!
+  The whole app only works because scouts are really there. Our polite message says:
+  <i>"No location, no McBroken. We only accept intel from people actually at the store."</i>
+</div>
+
+<h2 class="pagebreak"><span class="chapter-num">7</span> The Box of FREE Toys 🧰</h2>
+<p>
+  Here's a super-smart part: we built McBroken using building blocks that are mostly <b>FREE</b>!
+  Just like building a castle with LEGO bricks you already have. 🏰
+</p>
+<table>
+  <tr><th>The toy</th><th>What it does (in kid words)</th></tr>
+  <tr><td><b>Expo</b></td><td>One magic set of blocks that builds the app for <i>both</i> iPhone and Android at the same time. Build once, two phones happy!</td></tr>
+  <tr><td><b>Supabase</b></td><td>The big cloud brain that remembers stores and reports, and keeps the rules safe. Free to start!</td></tr>
+  <tr><td><b>PostGIS</b></td><td>The part of the brain that's amazing at maps and "how far away" math. It draws our geofence bubbles.</td></tr>
+  <tr><td><b>MapLibre + OpenFreeMap</b></td><td>A free map to show little pins where each McDonald's is. No expensive map bills!</td></tr>
+  <tr><td><b>OpenStreetMap</b></td><td>A giant free list of where all 13,000+ McDonald's are. Like a treasure map everyone shares.</td></tr>
+  <tr><td><b>Sentry &amp; PostHog</b></td><td>Friendly robots that whisper "something broke!" or "lots of people are using it!" — free to start.</td></tr>
+  <tr><td><b>GitHub</b></td><td>A safe toy chest where we keep all our code and let robots test it for us.</td></tr>
+</table>
+<div class="box didyouknow">
+  <span class="label">💡 Did you know? The honest money part</span>
+  Almost everything is free! But three small things cost a little:
+  <ul>
+    <li>🍎 Apple charges <b>$99 a year</b> to put apps on iPhones.</li>
+    <li>🤖 Google charges <b>$25 one time</b> for Android.</li>
+    <li>🌐 A website name costs about <b>$12 a year</b>.</li>
+  </ul>
+  So the first year costs only about <b>$136</b> total. Everything else is $0 until LOTS of people use it —
+  and that's a happy problem to have! 🎉
+</div>
+
+<h2><span class="chapter-num">8</span> The Cloud Brain Does the Thinking</h2>
+<p>
+  Here's a golden rule of McBroken: <b>your phone is not allowed to make important decisions.</b>
+  Your phone is just a pretty window. 🪟 The <b>cloud brain (the server)</b> makes all the big choices:
+</p>
+<ul>
+  <li>"Is this scout really at the store?" → the brain decides. 🧠</li>
+  <li>"What mood is the McFlurry in?" → the brain counts and decides.</li>
+  <li>"Is this person allowed to report?" → the brain decides.</li>
+</ul>
+<p>
+  Why? Because a sneaky person could try to trick a phone. But the cloud brain has its <b>own</b>
+  copy of where every store is, so it can't be fooled. The phone just shows what the brain says. 😇
+</p>
+<div class="box bigword">
+  <span class="label">📚 Big Word Alert: "RLS"</span>
+  <b>RLS</b> stands for <i>Row Level Security</i>. It's a set of strong locks 🔒 on our data. The locks
+  let scouts <b>read</b> the store moods, but they do <b>not</b> let scouts sneak in and change things
+  directly. All changes must go through the brain's front door, where the guard checks everything.
+</div>
+
+<h2><span class="chapter-num">9</span> The Three Kinds of Intel</h2>
+<p>"Intel" is a spy word for "useful news." Scouts can send three kinds:</p>
+<table>
+  <tr><th>Type</th><th>What it means</th><th>Taps</th></tr>
+  <tr><td>🚨 <b>Crowd Intel</b></td><td>"I couldn't get my treat!" (Something's broken.)</td><td>1 tap</td></tr>
+  <tr><td>🧾 <b>Crowd Clear</b></td><td>"Actually, it's working fine!" (Cancels a broken report.)</td><td>1 tap</td></tr>
+  <tr><td>🍟 <b>Crew Word</b></td><td>A real McDonald's worker tells the truth. The most trusted news of all!</td><td>2 taps</td></tr>
+</table>
+<p>
+  No typing! No long messages! No photos! Just a tap or two. Easy-peasy. 🫰
+</p>
+<div class="box trythis">
+  <span class="label">🎯 The counting magic</span>
+  We take the "broken" reports and subtract the "it's fine!" reports. If more people say fine, the
+  friend goes back to green. The crowd fixes its own mistakes! 🧮
+</div>
+
+<h2 class="pagebreak"><span class="chapter-num">10</span> Crew Word: The Super-Trusted Helpers</h2>
+<p>
+  The people who <b>work</b> at McDonald's know the real truth about the machines. So we let them become
+  special <b>Verified Crew</b> for their own store. 🍟
+</p>
+<p>How does a worker become crew?</p>
+<ul>
+  <li>They tap <b>"I work here"</b> on their store's page.</li>
+  <li>They type a secret <b>store code</b> (the manager gives it to them).</li>
+  <li>They must be <b>at the store</b> (geofence again!).</li>
+  <li>Ta-da! They get a <b>🍟 Verified Crew</b> badge — but only for that one store.</li>
+</ul>
+<p>
+  When crew speak, it looks like an official stamp: <br>
+  <b>"🍟 Crew Word: Frappe is Chillin' (6m ago)."</b>
+</p>
+<p>
+  Crew Word is the boss! It beats all the crowd reports for 24 minutes. Because who knows better than
+  the person standing at the machine? 🧑‍🍳
+</p>
+
+<h2><span class="chapter-num">11</span> Earning Your Scout Badges</h2>
+<p>
+  Every time you send good intel, you climb the scout ladder! This is just for <b>you</b> to feel proud —
+  there's <b>no</b> contest, <b>no</b> leaderboard, and you can't see other scouts. It's your own private
+  <b>service record</b>. 🎖️
+</p>
+<div class="status-row" style="flex-wrap:wrap; gap:8px;">
+  <div>🥄 Flurry Scout</div>
+  <div>🍦 Cone Scout</div>
+  <div>🥤 Shake Scout</div>
+  <div>☕ Frappe Scout</div>
+  <div>❄️ Freeze Scout</div>
+  <div>🍨 Flurry Sergeant</div>
+  <div>📡 Flurry Captain</div>
+  <div>🛰️ Shake Major</div>
+  <div>🎖️ Milkshake Colonel</div>
+  <div>⭐ Frozen General</div>
+  <div>⭐⭐ Flurry General</div>
+  <div>🏆 Field Marshal of Frozen Affairs</div>
+</div>
+<p style="text-align:center;">Keep scouting, and one day you'll be the <b>Field Marshal of Frozen Affairs</b>! 👑</p>
+
+<h2><span class="chapter-num">12</span> Taking Care of the App for 2 Years 🌱</h2>
+<p>
+  Building an app is like planting a little tree. You can't just plant it and walk away — you have to
+  <b>water it</b> and <b>care for it</b> so it grows strong. Here's how 3 to 5 friends keep McBroken
+  healthy without getting tired.
+</p>
+
+<h3>🗓️ The Caring Calendar</h3>
+<table>
+  <tr><th>How often</th><th>What we do</th></tr>
+  <tr><td><b>Every day</b> (robots do it!)</td><td>Robots test new code and sweep away ice cubes older than 25 minutes. We don't lift a finger. 🤖</td></tr>
+  <tr><td><b>Every week</b> (~1 hour)</td><td>One friend (we take turns!) checks for broken things and makes sure we're still inside the free zone.</td></tr>
+  <tr><td><b>Every month</b> (~2 hours)</td><td>The whole team looks at how the app is doing and fixes any sneaky bugs.</td></tr>
+  <tr><td><b>Every 3 months</b></td><td>We refresh the big list of McDonald's stores and practice rescuing our saved data.</td></tr>
+  <tr><td><b>Twice a year</b></td><td>We update our building blocks (Expo) so nothing gets old and creaky.</td></tr>
+  <tr><td><b>Once a year</b></td><td>We pay Apple again, do a big safety check, and make sure we follow all the app-store rules.</td></tr>
+</table>
+
+<div class="box didyouknow">
+  <span class="label">💡 The "Take Turns" rule</span>
+  With only 3–5 friends, we <b>take turns</b> being the "helper of the week." That one person watches
+  for problems, and everybody else gets to keep building fun things. Next week, someone else takes a
+  turn. Nobody gets too tired, and everybody learns how everything works! 🔄
+</div>
+
+<h3>🧹 Keep the Toys Fresh</h3>
+<p>
+  Phone apps get old fast! Apple and Google change their rules every year. So we use a helpful robot
+  called <b>Renovate</b> that raises its hand 🙋 whenever a building block has a newer version. We never
+  fall too far behind — that's the #1 way little apps stay alive.
+</p>
+
+<h3>🛟 Always Have a Safety Net</h3>
+<p>
+  Every day, a robot makes a copy of our important lists (the stores and the scouts) and hides it
+  somewhere safe and free. And every 3 months, we <b>practice</b> bringing it back — because a safety
+  net you never test is just a rumor! 🪂
+</p>
+
+<h3>🐷 The Piggy Bank Plan</h3>
+<p>
+  As long as fewer than ~50,000 people use the app each month, we stay <b>free</b>! When more people
+  come (yay!), we'll happily pay about <b>$25 a month</b> for a bigger cloud brain. We even made a list
+  of "warning lights" that tell us exactly when it's time to upgrade. Growing up costs a little — and
+  that means McBroken is winning! 🏆
+</p>
+
+<div class="box trythis">
+  <span class="label">🎯 The 1-in-5 promise</span>
+  Out of every 5 days of work, we spend 1 day cleaning up and making things better — not just adding
+  new stuff. It's like tidying your room a little every week so it never becomes a giant mess. 🧼
+</div>
+
+<h2 class="pagebreak"><span class="chapter-num">★</span> The Big Idea (Remember This!)</h2>
+<div class="box didyouknow" style="text-align:center; font-size:18px;">
+  <span class="label" style="font-size:20px;">🌟 The whole app in one breath 🌟</span>
+  <b>Open. Look. Decide.</b><br>
+  Four frozen friends. 🍦🥤☕❄️<br>
+  Three traffic-light moods. 🟢🟠🔴<br>
+  You must really be there. 📍<br>
+  No names, no drama. 🤫<br>
+  Built with free toys, cared for with love. ❤️
+</div>
+
+<h2><span class="chapter-num">📖</span> Picture Dictionary (Glossary)</h2>
+<dl class="glossary">
+  <dt>Component</dt><dd>One of the four frozen friends (McFlurry, Milkshake, Frappe, Frozen Coke).</dd>
+  <dt>Status / Mood</dt><dd>The traffic-light color: 🟢 Chillin', 🟠 Sus, or 🔴 Cooked.</dd>
+  <dt>Intel</dt><dd>A spy word for "useful news" that scouts send.</dd>
+  <dt>Flurry Scout</dt><dd>You! A brave person who reports about ice-cream machines.</dd>
+  <dt>Field ID</dt><dd>Your secret code name, like K7QX-91RM. No real name needed.</dd>
+  <dt>Anonymous</dt><dd>Nobody knows who you are. Your privacy is safe.</dd>
+  <dt>Geofence</dt><dd>An invisible bubble around a store. You can only report inside it.</dd>
+  <dt>Server / Cloud Brain</dt><dd>The big helper in the sky that makes all the important decisions.</dd>
+  <dt>RLS (Row Level Security)</dt><dd>Strong locks that keep our data safe from sneaky changes.</dd>
+  <dt>Crew Word</dt><dd>The super-trusted news from a real McDonald's worker.</dd>
+  <dt>Free tier</dt><dd>The part of a toy you can use without paying any money. Our favorite part!</dd>
+</dl>
+
+<p class="footer-note">
+  The Big Friendly Book of McBroken • Made for the McBroken team 🍦<br>
+  Open. Look. Decide. • Be a good scout. 🫡
+</p>
+
+</body>
+</html>
